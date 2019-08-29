@@ -1,0 +1,15 @@
+#!/bin/bash
+
+read -p "Please enter the location of the " file
+echo "$file"
+
+read -p "Please enter the name of the file you want to save into " save
+echo "$save"
+
+
+nmap -Pn -ff --mtu 24 --osscan-guess -iL "$file" -oN "$save"
+ 
+
+echo "scan was successful"
+
+echo "Disclaimer: any malicious use of the code doesnt hold the author responsible"
